@@ -1,0 +1,105 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-family: "Sofia", cursive;
+}
+
+#root {
+  --title-color: #63bfcf;
+}
+
+body {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(59, 85, 109, 1) 0%,
+    rgba(11, 22, 44, 1) 65%
+  );
+  height: 100vh;
+}
+
+.Presentation,
+.Hard_Skills,
+.Hard_Skills_List
+.Front_End,
+.Back_End,
+.Decouverte,
+.Soft_Skills,
+.Coordonnees {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* *********************** PRESENTATION ************************* */ 
+
+  .Presentation
+  > img {
+  border-radius: 90px 30px;
+  margin-bottom: 2rem;
+}
+
+.Presentation > h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.Presentation > p {
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+/* *********************** HARD-SKILLS ************************* */
+
+.Hard_Skills > h1, .Front_End > h2, .Back_End > h2, .Decouverte > h2, .Soft_Skills > h1 {
+    color: #63bfcf;
+    font-size: 1.8rem;
+}
+
+.Front_End > div > p, .Back_End > div > p, .Decouverte > div > p, .Soft_Skills_List > p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.Soft_Skills_List {
+    text-align: center;
+}
+
+
+/* *********************** PROJETS **************************** */
+
+.Swiper_Slides > img {
+    width: 5rem;
+}
+
+
+
+/* *********************** COORDONNEES **************************** */
+
+.Coordonnees > div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.Coordonnees > div > img {
+    filter: invert(100%);
+    width: 3rem;
+    margin-right: 1.5rem;
+}
+
+.Coordonnees > div > a {
+    font-size: 1.5rem;
+}
+
+.Coordonnees > div > a:hover {
+    color: #63bfcf;
+    transition: 0.3s;
+}
