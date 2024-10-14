@@ -6,7 +6,8 @@
   text-decoration: none;
   list-style: none;
   color: white;
-  font-family: "Sofia", cursive;
+  /* font-family: "Sofia", cursive; */
+  font-family: "Courier New", Courier, monospace;
 }
 
 #root {
@@ -19,13 +20,18 @@ body {
     rgba(59, 85, 109, 1) 0%,
     rgba(11, 22, 44, 1) 65%
   );
-  height: 100vh;
+  height: 300vh;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 250vh;
+  }
 }
 
 .Presentation,
 .Hard_Skills,
-.Hard_Skills_List
-.Front_End,
+.Hard_Skills_List .Front_End,
 .Back_End,
 .Decouverte,
 .Soft_Skills,
@@ -37,69 +43,391 @@ body {
   margin-bottom: 2rem;
 }
 
-/* *********************** PRESENTATION ************************* */ 
+/* *********************** PRESENTATION ************************* */
 
-  .Presentation
-  > img {
+.Presentation > img {
   border-radius: 90px 30px;
   margin-bottom: 2rem;
 }
 
-.Presentation > h4 {
+.Presentation > div {
+  text-align: center;
+}
+
+.Presentation > div > h4 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
-.Presentation > p {
+.Presentation > div > p {
   text-align: justify;
   font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .Presentation > div > h4 {
+    font-size: 2.2rem;
+  }
+
+  .Presentation > div > p {
+    font-size: 1.6rem;
+    margin: 0rem 1rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Presentation {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .Presentation > img {
+    width: 30rem;
+    margin-right: 3rem;
+  }
+
+  .Presentation > div {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .Presentation > img {
+    margin: 8rem;
+  }
+  
+  .Presentation > div {
+    width: 60%;
+  }
 }
 
 /* *********************** HARD-SKILLS ************************* */
 
-.Hard_Skills > h1, .Front_End > h2, .Back_End > h2, .Decouverte > h2, .Soft_Skills > h1 {
-    color: #63bfcf;
-    font-size: 1.8rem;
+.Hard_Skills > h1,
+.Front_End > h2,
+.Back_End > h2,
+.Decouverte > h2,
+.Soft_Skills > h1 {
+  color: #63bfcf;
+  font-size: 1.8rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.Front_End > div > p, .Back_End > div > p, .Decouverte > div > p, .Soft_Skills_List > p {
-    font-size: 1.5rem;
-    text-align: center;
+.Front_End > div > p,
+.Back_End > div > p,
+.Decouverte > div > p,
+.Soft_Skills_List > p {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .Soft_Skills_List {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .Hard_Skills > h1,
+  .Soft_Skills > h1 {
+    font-size: 2.6rem;
+  }
+  .Front_End > h2,
+  .Back_End > h2,
+  .Decouverte > h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .Front_End > div > p,
+  .Back_End > div > p,
+  .Decouverte > div > p {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .Soft_Skills > h1 {
+    margin-bottom: 2rem;
+  }
+
+  .Soft_Skills_List {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .Soft_Skills_List > p {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Skills_Container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .Soft_Skills_List {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .Hard_Skills > h1 {
+    margin-bottom: 3rem;
+  }
+  
+  .Hard_Skills_List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rem;
+  }
+}
 
 /* *********************** PROJETS **************************** */
 
-.Swiper_Slides > img {
-    width: 5rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.Projects_Title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #63bfcf;
+}
+
+.carrousel2 > img,
+.carrousel3 > img,
+.carrousel5 > img {
+  width: 20rem;
+  margin-top: 2rem;
+  border-radius: 50px;
+}
+
+.carrousel1 > img,
+.carrousel4 > img,
+.carrousel6 > img {
+  width: 26rem;
+  margin-top: 2rem;
+}
+
+.carrousel1,
+.carrousel2,
+.carrousel3,
+.carrousel4,
+.carrousel5,
+.carrousel6 {
+  text-align: center;
+  margin: 2rem 0rem;
+}
+
+.carrousel1 > h3,
+.carrousel2 > h3,
+.carrousel3 > h3,
+.carrousel4 > h3,
+.carrousel5 > h3,
+.carrousel6 > h3 {
+  margin-bottom: 1rem;
+}
+
+.carrousel1 > p,
+.carrousel2 > p,
+.carrousel3 > p,
+.carrousel4 > p,
+.carrousel5 > p,
+.carrousel6 > p {
+  margin: 1rem 0rem;
+}
+
+.carrousel_inner > div > p > a:hover {
+  color: #63bfcf;
+  transition: 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .Projects_Title {
+    font-size: 2.6rem;
+  }
+
+  .carrousel1 > h3,
+  .carrousel2 > h3,
+  .carrousel3 > h3,
+  .carrousel4 > h3,
+  .carrousel5 > h3,
+  .carrousel6 > h3 {
+    font-size: 1.8rem;
+    margin: 0rem 1rem 2rem 1rem;
+  }
+
+  .carrousel1 > p,
+  .carrousel2 > p,
+  .carrousel3 > p,
+  .carrousel4 > p,
+  .carrousel5 > p,
+  .carrousel6 > p {
+    font-size: 1.6rem;
+    margin: 0rem 1rem;
+    line-height: 2.2rem;
+  }
+
+  .carrousel2 > img,
+  .carrousel3 > img,
+  .carrousel5 > img {
+    width: 25rem;
+  }
+
+  .carrousel1 > img,
+  .carrousel4 > img,
+  .carrousel6 > img {
+    width: 35rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .carrousel1 > p,
+  .carrousel2 > p,
+  .carrousel3 > p,
+  .carrousel4 > p,
+  .carrousel5 > p,
+  .carrousel6 > p {
+    margin: 0rem 3rem;
+  }
+
+  .carrousel2 > img,
+  .carrousel3 > img,
+  .carrousel5 > img {
+    width: 30rem;
+  }
+
+  .carrousel1 > img,
+  .carrousel4 > img,
+  .carrousel6 > img {
+    width: 70rem;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .carrousel1 > p,
+  .carrousel2 > p,
+  .carrousel3 > p,
+  .carrousel4 > p,
+  .carrousel5 > p,
+  .carrousel6 > p {
+    margin: 0rem 15rem;
+    font-size: 1.8rem;
+  }
+
+  .carrousel1 > img,
+  .carrousel4 > img,
+  .carrousel6 > img {
+    width: 85rem;
+  }
+}
+
+/* *********************** CARROUSEL ****************************** */
+
+.carrousel_inner > div {
+  display: none;
+}
+
+.carrousel_inner > div:first-child {
+  display: block;
+}
+
+.carrousel_controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.prev_button,
+.next_button {
+  width: 8rem;
+  height: 2.4rem;
+  border-radius: 6px;
+  color: black;
+  font-weight: 700;
+  background-color: #63bfcf;
+  font-size: 1.4rem;
+}
+
+.prev_button:hover,
+.next_button:hover {
+  background-color: #86deee;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .prev_button, .next_button {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .carrousel_inner {
+    margin-bottom: 5rem;
+  }
+
+  .prev_button, .next_button {
+    width: 15rem;
+    margin-bottom: 5rem;
+  }
+}
 
 
 /* *********************** COORDONNEES **************************** */
 
+.Coordonnees {
+  margin-top: 2rem;
+}
+
 .Coordonnees > div {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0rem;
 }
 
 .Coordonnees > div > img {
-    filter: invert(100%);
-    width: 3rem;
-    margin-right: 1.5rem;
+  filter: invert(100%);
+  width: 3rem;
+  margin-right: 1.5rem;
 }
 
 .Coordonnees > div > a {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .Coordonnees > div > a:hover {
-    color: #63bfcf;
-    transition: 0.3s;
+  color: #63bfcf;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .Coordonnees > div > a {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Coordonnees {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .Coordonnees {
+    gap: 12rem;
+  }
 }
