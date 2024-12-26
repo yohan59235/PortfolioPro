@@ -97,7 +97,7 @@ body {
   .Presentation > img {
     margin: 8rem;
   }
-  
+
   .Presentation > div {
     width: 60%;
   }
@@ -179,7 +179,7 @@ body {
   .Hard_Skills > h1 {
     margin-bottom: 3rem;
   }
-  
+
   .Hard_Skills_List {
     display: flex;
     flex-wrap: wrap;
@@ -217,12 +217,18 @@ body {
   margin-top: 2rem;
 }
 
+.carrousel7 > img {
+  width: 25rem;
+  margin-top: 2rem;
+}
+
 .carrousel1,
 .carrousel2,
 .carrousel3,
 .carrousel4,
 .carrousel5,
-.carrousel6 {
+.carrousel6,
+.carrousel7 {
   text-align: center;
   margin: 2rem 0rem;
 }
@@ -232,7 +238,8 @@ body {
 .carrousel3 > h3,
 .carrousel4 > h3,
 .carrousel5 > h3,
-.carrousel6 > h3 {
+.carrousel6 > h3,
+.carrousel7 > h3 {
   margin-bottom: 1rem;
 }
 
@@ -241,7 +248,8 @@ body {
 .carrousel3 > p,
 .carrousel4 > p,
 .carrousel5 > p,
-.carrousel6 > p {
+.carrousel6 > p,
+.carrousel7 > p {
   margin: 1rem 0rem;
 }
 
@@ -260,7 +268,8 @@ body {
   .carrousel3 > h3,
   .carrousel4 > h3,
   .carrousel5 > h3,
-  .carrousel6 > h3 {
+  .carrousel6 > h3,
+  .carrousel7 > h3 {
     font-size: 1.8rem;
     margin: 0rem 1rem 2rem 1rem;
   }
@@ -270,7 +279,8 @@ body {
   .carrousel3 > p,
   .carrousel4 > p,
   .carrousel5 > p,
-  .carrousel6 > p {
+  .carrousel6 > p,
+  .carrousel7 > p {
     font-size: 1.6rem;
     margin: 0rem 1rem;
     line-height: 2.2rem;
@@ -287,6 +297,10 @@ body {
   .carrousel6 > img {
     width: 35rem;
   }
+
+.carrousel7 > img {
+width: 38rem;
+}
 }
 
 @media screen and (min-width: 1440px) {
@@ -295,7 +309,8 @@ body {
   .carrousel3 > p,
   .carrousel4 > p,
   .carrousel5 > p,
-  .carrousel6 > p {
+  .carrousel6 > p,
+  .carrousel7 > p {
     margin: 0rem 3rem;
   }
 
@@ -310,6 +325,10 @@ body {
   .carrousel6 > img {
     width: 70rem;
   }
+
+  .carrousel7 > img {
+    width: 80rem;
+  }
 }
 
 @media screen and (min-width: 1680px) {
@@ -318,7 +337,8 @@ body {
   .carrousel3 > p,
   .carrousel4 > p,
   .carrousel5 > p,
-  .carrousel6 > p {
+  .carrousel6 > p,
+  .carrousel7 > p {
     margin: 0rem 15rem;
     font-size: 1.8rem;
   }
@@ -327,6 +347,10 @@ body {
   .carrousel4 > img,
   .carrousel6 > img {
     width: 85rem;
+  }
+
+  .carrousel7 > img {
+    width: 95rem;
   }
 }
 
@@ -364,7 +388,8 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .prev_button, .next_button {
+  .prev_button,
+  .next_button {
     width: 10rem;
     height: 3rem;
     font-size: 1.6rem;
@@ -376,12 +401,12 @@ body {
     margin-bottom: 5rem;
   }
 
-  .prev_button, .next_button {
+  .prev_button,
+  .next_button {
     width: 15rem;
     margin-bottom: 5rem;
   }
 }
-
 
 /* *********************** COORDONNEES **************************** */
 
