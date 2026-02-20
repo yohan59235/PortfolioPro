@@ -1,4 +1,4 @@
-* {
+/* * {
   border: none;
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@
   text-decoration: none;
   list-style: none;
   color: white;
-  /* font-family: "Sofia", cursive; */
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -41,11 +40,11 @@ body {
   padding: 1rem;
   align-items: center;
   margin-bottom: 2rem;
-}
+} */
 
 /* *********************** PRESENTATION ************************* */
 
-.Presentation > img {
+/* .Presentation > img {
   border-radius: 90px 30px;
   margin-bottom: 2rem;
 }
@@ -101,11 +100,11 @@ body {
   .Presentation > div {
     width: 60%;
   }
-}
+} */
 
 /* *********************** HARD-SKILLS ************************* */
 
-.Hard_Skills > h1,
+/* .Hard_Skills > h1,
 .Front_End > h2,
 .Back_End > h2,
 .Decouverte > h2,
@@ -185,11 +184,11 @@ body {
     flex-wrap: wrap;
     gap: 12rem;
   }
-}
+} */
 
 /* *********************** PROJETS **************************** */
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,9 +297,9 @@ body {
     width: 35rem;
   }
 
-.carrousel7 > img {
-width: 38rem;
-}
+  .carrousel7 > img {
+    width: 38rem;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -352,11 +351,11 @@ width: 38rem;
   .carrousel7 > img {
     width: 95rem;
   }
-}
+} */
 
 /* *********************** CARROUSEL ****************************** */
 
-.carrousel_inner > div {
+/* .carrousel_inner > div {
   display: none;
 }
 
@@ -406,11 +405,11 @@ width: 38rem;
     width: 15rem;
     margin-bottom: 5rem;
   }
-}
+} */
 
 /* *********************** COORDONNEES **************************** */
 
-.Coordonnees {
+/* .Coordonnees {
   margin-top: 2rem;
 }
 
@@ -455,4 +454,54 @@ width: 38rem;
   .Coordonnees {
     gap: 12rem;
   }
+} */
+
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.918);
+  width: 100%;
+  height: 100%;
+}
+
+.Presentation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.div1 > img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  border-radius: 1em 2.5em 1em 2.5em;
+  margin: 1em 0em 1em 0.5em;
+}
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: 1em 0.2em 1em 1em;
+}
+
+.div2 > figcaption:first-child{
+  margin-bottom: 1em;
+}
+
+.div2 > figcaption {
+  border: 1px solid white;
+  padding: 1em 1em;
+}
+
+.div3 {
+  grid-area: 2 / 1 / 4 / 3;
 }
