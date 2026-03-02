@@ -1,3 +1,25 @@
+let isAnimating = false;
+
+function goToPage(targetClass) {
+  const current = document.querySelector("section.active");
+  const target = document.querySelector("." + targetClass);
+
+  if (!current || !target || current === target || isAnimating) return;
+  isAnimating = true;
+
+  current.classList.add("flip-out");
+
+  setTimeout(() => {
+    current.classList.remove("active", "flip-out");
+    target.classList.add("active", "flip-in");
+  }, 300);
+
+  setTimeout(() => {
+    target.classList.remove("flip-in");
+    isAnimating = false;
+  }, 900);
+}
+
 // const slides = document.querySelectorAll(".carrousel_inner > div");
 // const prevButton = document.getElementById("prev");
 // const nextButton = document.getElementById("next");

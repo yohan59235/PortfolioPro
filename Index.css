@@ -475,6 +475,17 @@ body {
 
 /********** PREMIERE PAGE **********/
 
+section {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.PageContainer {
+  perspective: 1500px;
+  perspective-origin: center center;
+}
+
 .Presentation {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -529,34 +540,174 @@ body {
   text-align: center;
 }
 
+.div3 > figcaption > .Suite-Button {
+  background-color: rgb(224, 217, 217);
+  margin-left: 2em;
+  border: 1px solid;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+}
+
+.div3 > figcaption > .Suite-Button:hover {
+  background-color: rgb(88, 168, 221);
+  transition: ease 0.3s;
+}
+
+.Presentation,
+.Suite-Presentation,
+.Skills-Page,
+.Projet1-Page,
+.Projet2-Page,
+.Projet3-Page,
+.Projet4-Page,
+.Liens-Page {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.Presentation.active {
+  display: grid;
+}
+
+.Suite-Presentation.active,
+.Skills-Page.active,
+.Projet1-Page.active,
+.Projet2-Page.active,
+.Projet3-Page.active,
+.Projet4-Page.active,
+.Liens-Page.active {
+  display: block;
+}
+
+/********** EFFET DE CHANGEMENT DE PAGE **********/
+
+/* @keyframes flipOut {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  20% {
+    transform: rotateY(-15deg);
+    box-shadow: 8px 0 20px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    transform: rotateY(-45deg) scaleX(0.6);
+    box-shadow: 15px 0 40px rgba(0, 0, 0, 0.4);
+  }
+  80% {
+    transform: rotateY(-80deg) scaleX(0.15);
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotateY(-90deg) scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    transform: rotateY(90deg) scaleX(0);
+    opacity: 0;
+  }
+  20% {
+    transform: rotateY(80deg) scaleX(0.15);
+    opacity: 0.4;
+  }
+  50% {
+    transform: rotateY(45deg) scaleX(0.6);
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.4);
+  }
+  80% {
+    transform: rotateY(15deg);
+    box-shadow: -8px 0 20px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: rotateY(0deg) scaleX(1);
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.flip-out {
+  animation: flipOut 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  transform-origin: left center;
+}
+
+.flip-in {
+  animation: flipIn 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  transform-origin: left center;
+} */
+
+@keyframes flipOut {
+  0% {
+    transform: rotateY(0deg) scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(-90deg) scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    transform: rotateY(90deg) scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) scaleX(1);
+    opacity: 1;
+  }
+}
+
+.flip-out {
+  animation: flipOut 0.6s cubic-bezier(0.4, 0, 1, 1) forwards;
+  transform-origin: left center;
+}
+
+.flip-in {
+  animation: flipIn 0.6s cubic-bezier(0, 0, 0.6, 1) forwards;
+  transform-origin: left center;
+}
+
 /********** FOOTER **********/
 
 .Footer {
-  border-top: 3px solid rgb(255, 145, 0);
+  border-top: 3px solid rgb(88, 168, 221);
   display: flex;
   flex-wrap: wrap;
   column-gap: 1em;
   justify-content: center;
   background-color: #2e2e2e;
+  position: relative;
+  z-index: 100;
 }
 
 .Footer > div {
   border: 1px solid rgb(255, 255, 255);
   padding: 0.2em;
   background-color: #2e2e2e;
-  border-radius: 0.1em;
+  border-radius: 0.3em;
 }
 
 .Footer > div:hover {
-  background-color: rgb(192, 125, 0);
+  background-color: rgb(88, 168, 221);
   transition: ease 0.3s;
 }
 
-.Footer > div > p:hover {
+.Footer > div > button {
+  background-color: #2e2e2e;
+}
+
+.Footer > div > button:hover {
   color: black;
+  background-color: rgb(88, 168, 221);
   transition: ease 0.3s;
 }
 
-.Footer > div > p {
+.Footer > div > button {
   color: white;
 }
