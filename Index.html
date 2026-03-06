@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
@@ -13,71 +15,33 @@
     <title>Portfolio Yohan Collinse</title>
   </head>
   <body>
-    <section class="PageContainer">
-      <section class="Presentation active" id="APropos">
-        <div class="div1"><img src="/assets/images/avatar.jpg" alt="" /></div>
-        <div class="div2">
-          <figcaption>Je m'appelle Yohan Collinse</figcaption>
-          <figcaption>Je suis Développeur Web Junior</figcaption>
-        </div>
-        <div class="div3">
-          <figcaption>
-            Après avoir évolué dans des secteurs variés (gendarmerie, sécurité,
-            production, transport de sang), l'envie de me réinventer
-            professionnellement s'est imposée.<br />
-            Tout a commencé en mai 2023, avec un défi personnel : créer un site
-            internet pour mon mariage, sans aucune expérience en développement.
-            <button
-              onclick="goToPage('Suite-Presentation')"
-              class="Suite-Button"
-            >
-              Suite
-            </button>
-          </figcaption>
-        </div>
-      </section>
-      <section class="Suite-Presentation" id="Suite-Presentation">
+    <section class="MobileView">
+      <div class="Presentation">
         <div>
-          <figcaption>
-            Quelques tutoriels, plusieurs mois de pratique en HTML/CSS plus
-            tard, la passion était là. Je me suis alors inscrit à une formation
-            Full Remote de 5 mois, qui a confirmé mon choix de me reconvertir
-            dans le développement web.
-          </figcaption>
+          <img src="/assets/images/avatar.jpg" alt="" />
+          <p>
+            Je m'appelle Yohan Collinse. <br />
+            Je suis développeur web junior.
+          </p>
         </div>
-      </section>
-      <section class="Skills-Page"></section>
-      <section class="Projet1-Page"></section>
-      <section class="Projet2-Page"></section>
-      <section class="Projet3-Page"></section>
-      <section class="Projet4-Page"></section>
-      <section class="Liens-Page"></section>
+
+        <p>
+          Après plusieurs expériences professionnelles dans différents secteurs,
+          j'ai décidé de me reconvertir dans le développement web. Tout a
+          commencé avec la création d’un site pour mon mariage en 2023. Depuis,
+          je me suis formé au développement web et j’ai suivi une formation
+          intensive en full remote de 5 mois.
+        </p>
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </section>
-
-    <footer class="Footer">
-      <div class="Accueil">
-        <button onclick="goToPage('Prensentation active')">A PROPOS</button>
-      </div>
-      <div class="Skills">
-        <button onclick="goToPage('Skills-Page')">SKILLS</button>
-      </div>
-      <div class="Projet1">
-        <button onclick="goToPage('Projet1-Page')">PROJET 1</button>
-      </div>
-      <div class="Projet2">
-        <button onclick="goToPage('Projet2-Page')">PROJET 2</button>
-      </div>
-      <div class="Projet3">
-        <button onclick="goToPage('Projet3-Page')">PROJET 3</button>
-      </div>
-      <div class="Projet4">
-        <button onclick="goToPage('Projet4-Page')">PROJET 4</button>
-      </div>
-      <div class="Liens">
-        <button onclick="goToPage('Liens-Page')">LIENS</button>
-      </div>
-    </footer>
-
+    <section class="TabletteComputerView"></section>
+    <footer></footer>
     <script src="Index.js"></script>
   </body>
 </html>
