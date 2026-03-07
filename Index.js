@@ -1,46 +1,65 @@
-// let isAnimating = false;
+// const pages = document.querySelectorAll(".Page");
 
-// function goToPage(targetClass) {
-//   const current = document.querySelector("section.active");
-//   const target = document.querySelector("." + targetClass);
+// let currentZ = 1
 
-//   if (!current || !target || current === target || isAnimating) return;
-//   isAnimating = true;
+// function goToPage(pageId) {
+//   pages.forEach((page) => {
+//     page.classList.remove("active");
+//   });
+//   document.getElementById(pageId).classList.add("active");
+// }
+/******************************* */
+// const zIndexCounter = 1;
 
-//   current.classList.add("flip-out");
+// const pages = document.querySelectorAll(".Page");
+
+// const firstPage = document.getElementById("Presentation");
+// firstPage.classList.add("show");
+// firstPage.style.zIndex = zIndexCounter;
+
+// function goToPage(id) {
+//   const page = document.getElementById(id);
+
+//   if (!page) return;
+
+//   zIndexCounter++;
+
+//   page.style.zIndex = zIndexCounter;
+
+//   page.classList.remove("show");
 
 //   setTimeout(() => {
-//     current.classList.remove("active", "flip-out");
-//     target.classList.add("active", "flip-in");
-//   }, 300);
-
-//   setTimeout(() => {
-//     target.classList.remove("flip-in");
-//     isAnimating = false;
-//   }, 900);
+//     page.classList.add("show");
+//   }, 10);
 // }
 
-const pages = document.querySelectorAll(".PageContainer section");
+/********************************** */
 
-let currentPage = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const pages = document.querySelectorAll(".Page");
 
-function goToPage(pageId) {
-  const targetIndex = [...pages].findIndex((p) => p.id === pageId);
+  let stack = [];
 
-  if (targetIndex === -1) return;
-
-  if (targetIndex > currentPage) {
-    for (let i = currentPage; i < targetIndex; i++) {
-      pages[i].classList.add("folded");
+  window.goToPage = function (id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    const current = stack[stack.length - 1];
+    if (current && current.id === id) return;
+    if (!stack.includes(target)) {
+      stack.push(target);
+    } else {
+      stack = stack.slice(0, stack.indexOf(target) + 1);
     }
-  } else {
-    for (let i = currentPage - 1; i >= targetIndex; i--) {
-      pages[i].classList.remove("folded");
-    }
-  }
+    pages.forEach((page) => page.classList.remove("show"));
+    stack.forEach((page, index) => {
+      page.style.zIndex = index + 1;
+    });
 
-  currentPage = targetIndex;
-}
+    target.classList.add("show");
+  };
+});
+
+/**********/
 
 // const slides = document.querySelectorAll(".carrousel_inner > div");
 // const prevButton = document.getElementById("prev");
