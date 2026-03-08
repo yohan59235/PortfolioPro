@@ -468,7 +468,7 @@ body {
 }
 
 body {
-  background-color: rgb(224, 217, 217);
+  background-color: rgb(233, 233, 233);
   width: 100%;
   height: 100vh;
 }
@@ -539,11 +539,11 @@ body {
   align-items: center;
   text-align: center;
   margin: 2em 1em;
-  border: 1px solid rgb(170, 170, 170);
+  border: 1px solid rgb(179, 179, 179);
   padding: 0.3em 0.3em 0.3em 0.6em;
   border-radius: 2em;
   font-size: 0.8em;
-  background-color: #cfcece;
+  background-color: #dddbdb;
 }
 
 .Dot {
@@ -598,4 +598,53 @@ body {
 
 .Avatar > div > p {
   color: #c8714a;
+}
+
+/********** PRESENTATION **********/
+
+.Presentation {
+  margin: 1em 0.5em;
+}
+
+.Presentation > h2 {
+  font-size: 2em;
+}
+
+.Presentation > h3 {
+  font-size: 2em;
+  font-style: italic;
+  color: #c8714a;
+  font-weight: 500;
+}
+
+.Presentation > p {
+  font-weight: 700;
+}
+
+.Presentation > figcaption {
+  margin: 1em 0em;
+  font-size: 0.9em;
+  font-weight: lighter;
+}
+
+.PresentationButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex start;
+  justify-content: start;
+  text-align: center;
+}
+
+.PresentationButton > button {
+  border: 1px solid rgba(179, 179, 179, 179);
+  border-radius: 0.5em;
+  height: 3em;
+  width: 15em;
+}
+
+.PresentationButton > button:first-child {
+  background: #1e3a5f;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
