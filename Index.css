@@ -481,35 +481,121 @@ body {
   padding: 0.3em 0.5em;
   align-items: center;
   height: 3em;
+  box-shadow: 0px 6px 6px -5px rgba(0, 0, 0, 0.75);
 }
 
 .Header > img {
-  width: 2em;
+  width: 1.5em;
 }
 
 .Header > img:hover {
   zoom: 110%;
+  transition: 0.3s ease;
 }
 
 .MenuBurger {
-  position: absolute;
+  position: fixed;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   top: 3em;
-  left: -1em;
+  left: 30em;
   background-color: rgb(224, 217, 217);
-  width: 100vw;
-  gap: 1em;
+  width: 100%;
+  transition: left 0.8s ease;
+  border-bottom: 1px solid #c8714a;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-left: 1px solid #c8714a;
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+.MenuBurger.active {
+  left: 0;
+  z-index: 1000;
 }
 
 .MenuBurger > p {
-  padding: 0.5em 1em;
+  width: 100%;
+  height: 3em;
+  padding-top: 0.7em;
 }
 
 .MenuBurger > p:hover {
-  border: 1px solid #c8714a;
-  transition: border 1s ease;
+  background-color: #c8714a;
+  transition: 1s ease;
+  border-radius: 0.5em;
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+/********** DISPONIBILITE **********/
+
+.Dispo {
+  display: flex;
+  justify-content: start;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+  margin: 2em 1em;
+  border: 1px solid rgb(170, 170, 170);
+  padding: 0.3em 0.3em 0.3em 0.6em;
+  border-radius: 2em;
+  font-size: 0.8em;
+  background-color: #cfcece;
+}
+
+.Dot {
+  width: 0.5em;
+  height: 0.5em;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/********** AVATAR **********/
+
+.Avatar {
+  margin: 0em 2em;
+}
+
+.Avatar > img {
+  width: 8em;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+.Avatar > div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: -0.25em 0em 0em -1em;
+  gap: 0.7em;
+  padding: 0.3em 0.5em;
+  width: 12em;
+  font-size: 0.8em;
+  color: #c8714a;
+  background: rgb(235, 235, 235);
+  border-radius: 1em;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.Avatar > div > img {
+  width: 1.5em;
+}
+
+.Avatar > div > p {
+  color: #c8714a;
 }

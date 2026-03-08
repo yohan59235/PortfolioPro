@@ -1,3 +1,10 @@
+const burger = document.getElementById("Burger");
+const menu = document.getElementById("MenuBurger");
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
 // const slides = document.querySelectorAll(".carrousel_inner > div");
 // const prevButton = document.getElementById("prev");
 // const nextButton = document.getElementById("next");
