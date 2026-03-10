@@ -544,7 +544,7 @@ body {
   text-align: center;
   margin: 5em 1em 2em 1em;
   border: 1px solid rgb(179, 179, 179);
-  padding: 0.3em 0.3em 0.3em 0.6em;
+  padding: 0.3em 0.3em 0.3em 0.9em;
   border-radius: 2em;
   font-size: 0.8em;
   background-color: #dddbdb;
@@ -660,6 +660,7 @@ body {
   transform: scale(101%);
   box-shadow: 1px 1px 10px -1px rgba(49, 49, 49, 0.75);
   background: #254774;
+  transition: 0.3s ease;
 }
 
 .PresentationButton > button:last-child:hover {
@@ -675,17 +676,17 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
-  background: #eee4d1;
+  background: #d8d4cc;
 }
 
 .Stats > div {
-    border: 1px solid #DDD9D0;
-    width: 5em;
-    height: 5em;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  border: 1px solid #d1cec5;
+  width: 5em;
+  height: 5em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Stats > div > h3 {
@@ -695,4 +696,304 @@ body {
 .Stats > div > p {
   font-size: 0.8em;
   font-weight: 200;
+}
+
+/********** A PROPOS **********/
+
+.InfoPerso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 1em;
+}
+
+.Apropos > h1 {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #c8714a;
+}
+
+.Apropos > h2 {
+  font-size: 2em;
+  margin: 0.1em 0em 0.5em 0em;
+}
+
+.Apropos > h2 > span {
+  font-style: italic;
+  color: #c8714a;
+  margin-right: 0.2em;
+}
+
+.Apropos > p {
+  margin-bottom: 2em;
+}
+
+.Formation,
+.Zone,
+.Goal,
+.Langage {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #b8b5ae;
+  border-radius: 1em;
+  background: #d8d4cc;
+  width: 95%;
+  height: 7em;
+  margin-bottom: 1em;
+}
+
+.Formation > img,
+.Zone > img,
+.Goal > img,
+.Langage > img {
+  width: 1.7em;
+  margin: 1em 0em 0em 1em;
+}
+
+.Formation > p,
+.Zone > p,
+.Goal > p,
+.Langage > p {
+  margin: 0.5em 0em 0.2em 1em;
+  font-size: 0.8em;
+}
+
+/********** SKILLS **********/
+
+.Skills {
+  background: #d8d4cc;
+  border-top: 1px solid #b8b5ae;
+  border-bottom: 1px solid #b8b5ae;
+  padding: 1em 1em;
+}
+
+.Skills > div > h1 {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #c8714a;
+}
+
+.Skills > div > h2 {
+  font-size: 2em;
+}
+
+.Skills > div > h2 > span {
+  color: #c8714a;
+  font-style: italic;
+}
+
+.Skills > div > p {
+  font-size: 0.8em;
+  font-weight: 200;
+  color: gray;
+  margin-bottom: 2em;
+}
+
+.Technos {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  gap: 1em;
+}
+
+.HardSkills,
+.SoftSkills,
+.Decouverte {
+  border: 1px solid #b8b5ae;
+  width: 100%;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+/********** HARDSKILLS **********/
+
+.HardSkillsTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.HardSkillsTitle > img {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.HardSkillsTitle > h4 {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.OrgaSkills {
+  display: flex;
+  flex-direction: column;
+}
+
+.Front > div,
+.Back > div,
+.Outils > div,
+.Donnees > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.Front > div > p,
+.Back > div > p,
+.Outils > div > p,
+.Donnees > div > p {
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.Front > div > p:last-child,
+.Back > div > p:last-child,
+.Outils > div > p:last-child,
+.Donnees > div > p:last-child {
+  color: #a54d25;
+}
+
+.HrFront,
+.HrBack,
+.HrOutils,
+.HrDonnees {
+  width: 100%;
+  height: 0.35em;
+  background: rgb(196, 195, 195);
+  border-radius: 0.3em;
+}
+
+.HrFront > hr {
+  width: 70%;
+  height: 100%;
+  border-radius: 0.3em;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 59, 95, 1) 0%,
+    rgba(197, 112, 75, 1) 100%
+  );
+}
+
+.HrBack > hr {
+  width: 60%;
+  height: 100%;
+  border-radius: 0.3em;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 59, 95, 1) 0%,
+    rgba(197, 112, 75, 1) 100%
+  );
+}
+
+.HrOutils > hr {
+  width: 60%;
+  height: 100%;
+  border-radius: 0.3em;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 59, 95, 1) 0%,
+    rgba(197, 112, 75, 1) 100%
+  );
+}
+
+.HrDonnees > hr {
+  width: 50%;
+  height: 100%;
+  border-radius: 0.3em;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 59, 95, 1) 0%,
+    rgba(197, 112, 75, 1) 100%
+  );
+}
+
+.HardSkillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.HardSkillsList > p {
+  border: 1px solid #b8b5ae;
+  padding: 0.5em 1.4em;
+  border-radius: 1.2em;
+  font-weight: 600;
+  font-size: 0.8em;
+  background: #d4d3d3;
+}
+
+/********** SOFTSKILLS **********/
+
+.SoftSkillsTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.SoftSkillsTitle > img {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.SoftSkillsTitle > h4 {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.SoftSkillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.SoftSkillsList > p {
+  border: 1px solid #c8714a;
+  color: #a54d25;
+  font-weight: 600;
+  padding: 0.5em 1.4em;
+  border-radius: 1.2em;
+  font-size: 0.8em;
+  background: #e4cebca6;
+}
+
+/********** DECOUVERTE **********/
+
+.Decouverte {
+  margin-bottom: 1em;
+}
+
+.DecouverteTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.DecouverteTitle > img {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.DecouverteTitle > h4 {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.DecouverteList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.DecouverteList > p {
+  border: 1px solid #b8b5ae;
+  color: rgb(33, 33, 102);
+  font-weight: 600;
+  padding: 0.5em 1.4em;
+  border-radius: 1.2em;
+  font-size: 0.8em;
+  background: #d1d1da;
 }
