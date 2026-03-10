@@ -476,8 +476,13 @@ body {
 /********* HEADER **********/
 
 .Header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  background: rgb(233, 233, 233);
   padding: 0.3em 0.5em;
   align-items: center;
   height: 3em;
@@ -502,7 +507,7 @@ body {
   justify-content: center;
   top: 3em;
   left: 30em;
-  background-color: rgb(224, 217, 217);
+  background-color: rgb(233, 233, 233);
   width: 100%;
   transition: left 0.8s ease;
   border-bottom: 1px solid #c8714a;
@@ -514,16 +519,15 @@ body {
 
 .MenuBurger.active {
   left: 0;
-  z-index: 1000;
 }
 
-.MenuBurger > p {
+.MenuBurger > a {
   width: 100%;
   height: 3em;
   padding-top: 0.7em;
 }
 
-.MenuBurger > p:hover {
+.MenuBurger > a:hover {
   background-color: #c8714a;
   transition: 1s ease;
   border-radius: 0.5em;
@@ -538,7 +542,7 @@ body {
   gap: 1em;
   align-items: center;
   text-align: center;
-  margin: 2em 1em;
+  margin: 5em 1em 2em 1em;
   border: 1px solid rgb(179, 179, 179);
   padding: 0.3em 0.3em 0.3em 0.6em;
   border-radius: 2em;
@@ -547,11 +551,13 @@ body {
 }
 
 .Dot {
+  position: relative;
   width: 0.5em;
   height: 0.5em;
   background: #22c55e;
   border-radius: 50%;
   animation: blink 3s infinite;
+  z-index: 0;
 }
 
 @keyframes blink {
@@ -603,7 +609,7 @@ body {
 /********** PRESENTATION **********/
 
 .Presentation {
-  margin: 1em 0.5em;
+  margin: 1em 1em;
 }
 
 .Presentation > h2 {
@@ -633,6 +639,7 @@ body {
   align-items: flex start;
   justify-content: start;
   text-align: center;
+  margin-bottom: 2em;
 }
 
 .PresentationButton > button {
@@ -647,4 +654,45 @@ body {
   color: white;
   font-weight: bold;
   margin-bottom: 1em;
+}
+
+.PresentationButton > button:first-child:hover {
+  transform: scale(101%);
+  box-shadow: 1px 1px 10px -1px rgba(49, 49, 49, 0.75);
+  background: #254774;
+}
+
+.PresentationButton > button:last-child:hover {
+  color: #c8714a;
+  border: 1px solid #c8714a;
+  transition: 0.3s ease;
+}
+
+/********** STATS **********/
+
+.Stats {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #eee4d1;
+}
+
+.Stats > div {
+    border: 1px solid #DDD9D0;
+    width: 5em;
+    height: 5em;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Stats > div > h3 {
+  color: #c8714a;
+}
+
+.Stats > div > p {
+  font-size: 0.8em;
+  font-weight: 200;
 }
