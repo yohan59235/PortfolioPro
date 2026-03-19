@@ -1000,11 +1000,37 @@ body {
 
 /********** PROJETS **********/
 
+.ProjectTitle {
+  padding: 1em;
+}
+
+.ProjectTitle > h1 {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #c8714a;
+}
+
+.ProjectTitle > h2 {
+  font-size: 2em;
+}
+
+.ProjectTitle > h2 > span {
+  color: #c8714a;
+  font-style: italic;
+}
+
+.ProjectTitle > p {
+  font-size: 0.8em;
+  font-weight: 200;
+  color: gray;
+  margin-bottom: 1em;
+}
+
 .FlipCard {
   position: relative;
   perspective: 1000px;
   cursor: pointer;
-  height: 17em;
+  height: 17.4em;
   align-items: center;
   text-align: center;
 }
@@ -1037,8 +1063,9 @@ body {
   inset: 0;
   backface-visibility: hidden;
   border-radius: 16px;
-  border: 1px solid gray;
+  border: 1px solid rgb(184, 183, 183);
   width: 18em;
+  box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.73);
 }
 
 .FlipCardFront > img,
@@ -1050,11 +1077,14 @@ body {
 }
 
 .FlipCardFront > p {
+  display: flex;
+  justify-content: center;
   background: #ede9e1;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   font-size: 0.8em;
-  margin-top: 0.5em;
+  align-items: center;
+  height: 2.5em;
 }
 
 .FlipCardFront > div {
@@ -1072,4 +1102,48 @@ body {
   background: #f9f0eb;
   padding: 0.2em 0.5em;
   border-radius: 2em;
+}
+
+.FlipCardBack {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+
+.FlipCardBack > div:first-child {
+  margin: 1em 1em 2em 1em;
+}
+
+.FlipCardBack > div:first-child > h2 {
+  margin-bottom: 0.3em;
+}
+
+.FlipCardBack > div:first-child > p {
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+.FlipCardBackStack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0em 1em;
+}
+
+.FlipCardBackStack > p {
+  border: 1px solid rgb(160, 160, 160);
+  background: rgba(204, 199, 194, 0.363);
+  padding: 0.3em 0.8em;
+  margin: 0em 0.5em 0.5em 0em;
+  border-radius: 1em;
+  font-size: 0.8em;
+}
+
+.FlipCardBack > ul > li > a {
+  margin: 0.3em 0em 0em 1em;
+  font-size: 0.8em;
+  color: #a54d25;
+  font-weight: 600;
 }
