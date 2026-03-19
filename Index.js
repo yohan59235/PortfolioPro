@@ -5,6 +5,14 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+/********** ROTATION CARTE **********/
+
+document.querySelectorAll(".FlipCard").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+});
+
 // const slides = document.querySelectorAll(".carrousel_inner > div");
 // const prevButton = document.getElementById("prev");
 // const nextButton = document.getElementById("next");
