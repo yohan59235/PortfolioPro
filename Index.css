@@ -642,28 +642,42 @@ body {
   margin-bottom: 2em;
 }
 
-.PresentationButton > button {
+.PresentationButton > a:last-child {
   border: 1px solid rgba(179, 179, 179, 179);
   border-radius: 0.5em;
-  height: 3em;
-  width: 15em;
+  height: 3.4em;
+  width: 15.6em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 0.8em;
 }
 
-.PresentationButton > button:first-child {
+.PresentationButton > a:first-child {
+  border: 1px solid rgba(179, 179, 179, 179);
+  border-radius: 0.5em;
+  height: 3.4em;
+  width: 15.6em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   background: #1e3a5f;
   color: white;
   font-weight: bold;
   margin-bottom: 1em;
+  font-size: 0.8em;
 }
 
-.PresentationButton > button:first-child:hover {
+.PresentationButton > a:first-child:hover {
   transform: scale(101%);
   box-shadow: 1px 1px 10px -1px rgba(49, 49, 49, 0.75);
   background: #254774;
   transition: 0.3s ease;
 }
 
-.PresentationButton > button:last-child:hover {
+.PresentationButton > a:last-child:hover {
   color: #c8714a;
   border: 1px solid #c8714a;
   transition: 0.3s ease;
@@ -1158,12 +1172,14 @@ body {
   font-size: 0.8em;
   color: #a54d25;
   font-weight: 600;
+  pointer-events: auto;
 }
 
 /********** CONTACT **********/
 
 .ContactContainer {
   background: #d8d4cc;
+  padding-bottom: 1em;
 }
 
 .ContactTitle {
@@ -1200,6 +1216,54 @@ body {
 .Smartphone {
   border: 1px solid gray;
   margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0em 1em 1em 1em;
+  background: rgb(228, 228, 228);
+  padding: 0.4em 0.8em;
+  border-radius: 0.7em;
+}
+
+.Email > img,
+.Linkedin > img,
+.Github > img,
+.Smartphone > img {
+  width: 2em;
+  background-color: #b6b4af;
+  padding: 0.3em;
+  border-radius: 0.4em;
+}
+
+.Email > div {
+  margin-left: -4.5em;
+}
+.Linkedin > div {
+  margin-left: -1.5em;
+}
+
+.Github > div {
+  margin-left: -4em;
+}
+
+.Smartphone > div {
+  margin-left: -7.3em;
+}
+
+.Email > div > p:first-child,
+.Linkedin > div > p:first-child,
+.Github > div > p:first-child,
+.Smartphone > div > p:first-child {
+  color: rgb(87, 87, 87);
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.Email > div > li > a,
+.Linkedin > div > li > a,
+.Github > div > li > a,
+.Smartphone > div > p:last-child {
+  font-size: 0.8em;
 }
 
 /********** FOOTER **********/
@@ -1213,7 +1277,6 @@ footer {
   text-align: center;
   height: 3em;
   background: #1a1a2e;
-  margin-top: 1em;
 }
 
 footer > p {
