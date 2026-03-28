@@ -722,6 +722,9 @@ body {
   margin: 2em 0em;
   width: 100%;
 }
+.Apropos {
+  margin: 0em 0.5em;
+}
 
 .Apropos > h1 {
   font-size: 0.8em;
@@ -1291,4 +1294,144 @@ footer > p:last-child {
 
 footer > p > span {
   color: #c8714a;
+}
+
+/********** MEDIA QUERY **********/
+
+@media screen and (min-width: 360px) {
+  .Formation,
+  .Zone,
+  .Goal,
+  .Langage {
+    width: 20em;
+  }
+
+  .FlipCardFront,
+  .FlipCardBack {
+    width: 20em;
+    margin-left: -1em;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .Formation,
+  .Zone,
+  .Goal,
+  .Langage {
+    width: 22em;
+  }
+
+  .FlipCardFront,
+  .FlipCardBack {
+    width: 22em;
+    margin-left: -2em;
+  }
+}
+
+@media screen and (min-width: 413px) {
+  .Formation,
+  .Zone,
+  .Goal,
+  .Langage {
+    width: 23em;
+  }
+
+  .FlipCardFront,
+  .FlipCardBack {
+    width: 23em;
+    margin-left: -2.5em;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .Formation,
+  .Zone,
+  .Goal,
+  .Langage {
+    width: 24em;
+  }
+
+  .FlipCardFront,
+  .FlipCardBack {
+    width: 24em;
+    margin-left: -3em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Header > h3 {
+    font-size: 1.5em;
+  }
+
+  .Header > img {
+    width: 2em;
+  }
+
+  .MenuBurger > a {
+    font-size: 1.5em;
+  }
+
+  .Dispo {
+    height: 3em;
+    margin: 8em 2em 5em 2em;
+  }
+
+  .Dispo > span {
+    margin-left: 1em;
+    width: 1em;
+    height: 1em;
+  }
+
+  .Dispo > p {
+    font-size: 1.5em;
+  }
+
+  .PresentationContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0em 2em 0em 2em;
+  }
+
+  .Avatar > img {
+    width: 10em;
+  }
+
+  .Avatar > div {
+    width: 14.5em;
+    height: 3em;
+  }
+
+  .Avatar > div > img {
+    width: 2em;
+  }
+
+  .Avatar > div > p {
+    font-size: 1.3em;
+  }
+
+  .Presentation > h2,
+  .Presentation > h3 {
+    font-size: 3em;
+  }
+
+  .Presentation > p {
+    font-size: 1.5em;
+  }
+
+  .Presentation > figcaption {
+    font-size: 1.3em;
+  }
+
+  .PresentationButton {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .PresentationButton > a:first-child,
+  .PresentationButton > a:last-child {
+    width: 10em;
+    height: 3em;
+    font-size: 1.2em;
+  }
 }
