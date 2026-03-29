@@ -853,6 +853,21 @@ footer > p > span {
     width: 20em;
     margin-left: -1em;
   }
+
+  .Email > div {
+    margin-left: -6.5em;
+  }
+  .Linkedin > div {
+    margin-left: -3.5em;
+  }
+
+  .Github > div {
+    margin-left: -6em;
+  }
+
+  .Smartphone > div {
+    margin-left: -9.3em;
+  }
 }
 
 @media screen and (min-width: 390px) {
@@ -867,6 +882,21 @@ footer > p > span {
   .FlipCardBack {
     width: 22em;
     margin-left: -2em;
+  }
+
+  .Email > div {
+    margin-left: -8.5em;
+  }
+  .Linkedin > div {
+    margin-left: -5.5em;
+  }
+
+  .Github > div {
+    margin-left: -8em;
+  }
+
+  .Smartphone > div {
+    margin-left: -11.3em;
   }
 }
 
@@ -897,6 +927,21 @@ footer > p > span {
   .FlipCardBack {
     width: 24em;
     margin-left: -3em;
+  }
+
+  .Email > div {
+    margin-left: -10.5em;
+  }
+  .Linkedin > div {
+    margin-left: -7.5em;
+  }
+
+  .Github > div {
+    margin-left: -10em;
+  }
+
+  .Smartphone > div {
+    margin-left: -13.3em;
   }
 }
 
@@ -1072,5 +1117,150 @@ footer > p > span {
   .SoftSkillsList > p,
   .DecouverteList > p {
     font-size: 1em;
+  }
+
+  .ProjectTitle > h1 {
+    font-size: 1.1em;
+  }
+
+  .ProjectTitle > h2 {
+    font-size: 3em;
+  }
+
+  .ProjectTitle > p {
+    font-size: 1.3em;
+  }
+
+  .ProjectCard {
+    justify-content: space-around;
+    height: 42em;
+  }
+
+  .FlipCardFront {
+    width: 22em;
+    height: 16em;
+  }
+
+  .FlipCardFront:first-child,
+  .FlipCardFront:nth-child(3) {
+    margin-left: -2em;
+  }
+
+  .FlipCardFront:last-child {
+    margin-left: -4em;
+  }
+
+  .FlipCardFront > div > h3 {
+    font-size: 1.3em;
+  }
+
+  .FlipCardFront > div > p {
+    font-size: 1.2em;
+  }
+
+  .FlipCardFront > p {
+    font-size: 1em;
+  }
+
+  .FlipCardBack {
+    width: 22em;
+    height: 18em;
+    margin-left: -2em;
+  }
+
+  .FlipCardBack > div > h2 {
+    font-size: 1.5em;
+  }
+
+  .FlipCardBack > div:first-child > p {
+    font-size: 1em;
+    margin-bottom: -1em;
+  }
+
+  .FlipCardBackStack > p {
+    font-size: 1.1em;
+    margin: 0.2em;
+  }
+
+  .FlipCardBack > ul {
+    margin-top: 1em;
+  }
+
+  .FlipCardBack > ul > li > a {
+    font-size: 1.3em;
+  }
+
+  .ContactTitle > h1 {
+    font-size: 1.1em;
+  }
+
+  .ContactTitle > h2 {
+    font-size: 3em;
+  }
+
+  .ContactTitle > p {
+    font-size: 1.3em;
+  }
+
+  .Email,
+  .Linkedin,
+  .Github,
+  .Smartphone {
+    height: 4em;
+  }
+
+  .Email > img,
+  .Linkedin > img,
+  .Github > img,
+  .Smartphone > img {
+    width: 2.7em;
+  }
+
+  .Email > div > p:first-child,
+  .Linkedin > div > p:first-child,
+  .Github > div > p:first-child,
+  .Smartphone > div > p:first-child {
+    font-size: 1.3em;
+  }
+
+  .Email > div > li > a,
+  .Linkedin > div > li > a,
+  .Github > div > li > a,
+  .Smartphone > div > li > a {
+    font-size: 1.3em;
+  }
+
+  .Email > p,
+  .Linkedin > p,
+  .Github > p,
+  .Smartphone > p {
+    font-size: 1.5em;
+  }
+
+  .Email > div {
+    margin-left: -25em;
+  }
+  .Linkedin > div {
+    margin-left: -20em;
+  }
+
+  .Github > div {
+    margin-left: -24.5em;
+  }
+
+  .Smartphone > div {
+    margin-left: -29.8em;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: end;
+    padding: 1em;
+  }
+
+  footer > p {
+    font-size: 1.2em;
   }
 }
