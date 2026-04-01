@@ -12,7 +12,6 @@
 body {
   background-color: rgb(233, 233, 233);
   width: 100%;
-  height: 100vh;
 }
 
 /********* HEADER **********/
@@ -81,6 +80,12 @@ body {
 }
 
 /********** DISPONIBILITE **********/
+
+.MainContainer {
+  max-width: 1780px;
+  margin: 0 auto;
+  width: 100%;
+}
 
 .Dispo {
   display: flex;
@@ -767,7 +772,8 @@ body {
   margin-bottom: 1em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 1em;
   margin: 0em 1em 1em 1em;
   background: rgb(228, 228, 228);
   padding: 0.4em 0.8em;
@@ -784,19 +790,20 @@ body {
   border-radius: 0.4em;
 }
 
-.Email > div {
-  margin-left: -4.5em;
-}
-.Linkedin > div {
-  margin-left: -1.5em;
-}
-
-.Github > div {
-  margin-left: -4em;
-}
-
+.Email > div,
+.Linkedin > div,
+.Github > div,
 .Smartphone > div {
-  margin-left: -7.3em;
+  flex: 1;
+  min-width: 0;
+  margin-left: 0;
+}
+
+.Email > p,
+.Linkedin > p,
+.Github > p,
+.Smartphone > p {
+  margin-left: auto;
 }
 
 .Email:hover,
@@ -868,7 +875,7 @@ footer > p > span {
     margin-left: -1em;
   }
 
-  .Email > div {
+  /* .Email > div {
     margin-left: -6.5em;
   }
   .Linkedin > div {
@@ -881,7 +888,7 @@ footer > p > span {
 
   .Smartphone > div {
     margin-left: -9.3em;
-  }
+  } */
 }
 
 @media screen and (min-width: 390px) {
@@ -896,21 +903,6 @@ footer > p > span {
   .FlipCardBack {
     width: 22em;
     margin-left: -2em;
-  }
-
-  .Email > div {
-    margin-left: -8.5em;
-  }
-  .Linkedin > div {
-    margin-left: -5.5em;
-  }
-
-  .Github > div {
-    margin-left: -8em;
-  }
-
-  .Smartphone > div {
-    margin-left: -11.3em;
   }
 }
 
@@ -941,21 +933,6 @@ footer > p > span {
   .FlipCardBack {
     width: 24em;
     margin-left: -3em;
-  }
-
-  .Email > div {
-    margin-left: -10.5em;
-  }
-  .Linkedin > div {
-    margin-left: -7.5em;
-  }
-
-  .Github > div {
-    margin-left: -10em;
-  }
-
-  .Smartphone > div {
-    margin-left: -13.3em;
   }
 }
 
@@ -1251,21 +1228,6 @@ footer > p > span {
     font-size: 1.5em;
   }
 
-  .Email > div {
-    margin-left: -25em;
-  }
-  .Linkedin > div {
-    margin-left: -20em;
-  }
-
-  .Github > div {
-    margin-left: -24.5em;
-  }
-
-  .Smartphone > div {
-    margin-left: -29.8em;
-  }
-
   footer {
     display: flex;
     flex-wrap: nowrap;
@@ -1304,7 +1266,7 @@ footer > p > span {
   .MenuDesktop > a:hover {
     color: #a54d25;
     transition: 0.3s ease;
-    /* code à faire pour sous ligner le menu */
+    border-bottom: 1px solid #a54d25;
   }
 
   .Header > img {
@@ -1322,6 +1284,52 @@ footer > p > span {
   }
 
   .Presentation > figcaption {
-    padding-right: 15em;
+    padding-right: 13em;
+  }
+
+  .Apropos > p {
+    padding-right: 25em;
+  }
+
+  .Technos {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .SoftAndDecouverte {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .HardSkills,
+  .SoftAndDecouverte {
+    width: 66%;
+  }
+
+  .SoftSkills,
+  .Decouverte {
+    height: 29.6em;
+  }
+
+  .LinkContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .EmailLinkedin,
+  .GithubSmartphone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Email,
+  .Linkedin,
+  .Github,
+  .Smartphone {
+    width: 35em;
+  }
+
+  Footer {
+    height: 4em;
   }
 }
