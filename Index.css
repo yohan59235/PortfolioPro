@@ -12,6 +12,8 @@
 body {
   background-color: rgb(233, 233, 233);
   width: 100%;
+  max-width: 1780px;
+  margin: 0 auto;
 }
 
 /********* HEADER **********/
@@ -27,7 +29,9 @@ body {
   padding: 0.3em 0.5em;
   align-items: center;
   height: 3em;
-  box-shadow: 0px 6px 6px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 6px -5px rgba(0, 0, 0, 0.75);
+  max-width: 1780px;
+  margin: 0 auto;
 }
 
 .Header > img {
@@ -936,6 +940,37 @@ footer > p > span {
   }
 }
 
+@media screen and (min-width: 605px) {
+  .ProjectCard {
+    gap: 2em;
+    margin: 0em 1em;
+  }
+}
+
+@media screen and (min-width: 652px) {
+  .ProjectCard {
+    gap: 2.3em;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .ProjectCard {
+    gap: 2.5em;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .ProjectCard {
+    margin: 0em 2em;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .ProjectCard {
+    margin: 0em 4em;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .Header > h3 {
     font-size: 1.5em;
@@ -1124,7 +1159,7 @@ footer > p > span {
 
   .ProjectCard {
     justify-content: space-around;
-    height: 42em;
+    margin: 0em 1em;
   }
 
   .FlipCardFront {
@@ -1331,5 +1366,24 @@ footer > p > span {
 
   Footer {
     height: 4em;
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .ProjectCard {
+    gap: 3em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ProjectCard {
+    gap: 3.1em;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1560px) {
+  .ProjectCard {
+    margin: 0em 1em;
   }
 }
