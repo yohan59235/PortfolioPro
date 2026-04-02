@@ -1395,6 +1395,17 @@ footer > p > span {
   .ProjectCard {
     margin: 0em 1em;
   }
+
+  .LinkContainer {
+    justify-content: space-evenly;
+  }
+
+  .Email,
+  .Linkedin,
+  .Github,
+  .Smartphone {
+    width: 45em;
+  }
 }
 
 @media screen and (min-width: 1736px) {
