@@ -1190,7 +1190,7 @@ footer > p > span {
 
   .FlipCardBack {
     width: 22em;
-    height: 18em;
+    height: 16em;
     margin-left: -2em;
   }
 
@@ -1344,6 +1344,10 @@ footer > p > span {
   .SoftSkills,
   .Decouverte {
     height: 29.6em;
+  }
+
+  .FlipCardBackStack > p {
+    font-size: 0.9em;
   }
 
   .LinkContainer {
