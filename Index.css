@@ -1377,6 +1377,11 @@ footer > p > span {
   .ProjectCard {
     gap: 3em;
   }
+
+  .SoftSkills,
+  .Decouverte {
+    height: 27em;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1389,5 +1394,12 @@ footer > p > span {
 @media screen and (min-width: 1560px) {
   .ProjectCard {
     margin: 0em 1em;
+  }
+}
+
+@media screen and (min-width: 1736px) {
+  .SoftSkills,
+  .Decouverte {
+    height: 24em;
   }
 }
